@@ -16,7 +16,7 @@ import * as Pages from './pages'
 const routes = [
   { path: '/', label: 'Home' },
   { path: '/services', label: 'Services' },
-  { path: '/about', label: 'About' },
+  { path: '/about', label: 'Our Story' },
   { path: '/contact-us', label: 'Contact Us' },
 ]
 
@@ -29,7 +29,6 @@ const AppRouter = () => {
         style={{
           backgroundColor: 'white',
           color: 'lightblue',
-          fontFamily: 'Snell Roundhand, cursive	',
         }}
       >
         <Toolbar>
@@ -45,7 +44,9 @@ const AppRouter = () => {
             variant="h6"
             style={{ width: '100%', paddingRight: 48, textAlign: 'center' }}
           >
-            The Whole SHEbang
+            <div style={{ height: '50px' }}>
+              <img src="/img/logo.png" style={{ height: '100%' }} />
+            </div>
           </Typography>
           <SwipeableDrawer
             anchor="left"
@@ -54,7 +55,7 @@ const AppRouter = () => {
             onClose={() => setMenuOpen(false)}
           >
             <Avatar
-              src="/logo.png"
+              src="/img/logo2.png"
               style={{
                 padding: '10px 20px',
                 width: '100px',
