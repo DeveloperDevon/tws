@@ -4,13 +4,14 @@ import {
   GridList,
   GridListTile,
   Typography,
+  useMediaQuery,
 } from '@material-ui/core'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
-import { Carousel } from 'react-responsive-carousel'
 import { Link } from 'react-router-dom'
-import { CarouselItem } from '../components'
+import { CarouselShowcase, GridListShowcase } from '../components'
 
 export const HomePage = () => {
+  const isMobile = useMediaQuery('(max-width: 600px)')
   return (
     <>
       <div>
@@ -20,30 +21,7 @@ export const HomePage = () => {
           we offer affordable and attainable organization for the everyday
           person.
         </Typography>
-        {/* <Carousel showArrows showThumbs={false} showStatus={false}>
-          <CarouselItem imgSrc="/img/showcase1.jpg" />
-          <CarouselItem imgSrc="/img/showcase2.jpg" />
-          <CarouselItem imgSrc="/img/showcase3.jpg" />
-          <CarouselItem imgSrc="/img/showcase4.jpg" />
-          <CarouselItem imgSrc="/img/showcase5.jpg" />
-        </Carousel> */}
-        <GridList cellHeight={320} cols={4}>
-          <GridListTile cols={2}>
-            <img src="/img/showcase1.jpg" alt="img1" />
-          </GridListTile>
-          <GridListTile cols={2}>
-            <img src="/img/showcase2.jpg" alt="img1" />
-          </GridListTile>
-          <GridListTile cols={1}>
-            <img src="/img/showcase3.jpg" alt="img1" />
-          </GridListTile>
-          <GridListTile cols={2}>
-            <img src="/img/showcase5.jpg" alt="img1" />
-          </GridListTile>
-          <GridListTile cols={1}>
-            <img src="/img/showcase4.jpg" alt="img1" />
-          </GridListTile>
-        </GridList>
+        {isMobile ? <CarouselShowcase /> : <GridListShowcase />}
         <div
           style={{ padding: 15, backgroundColor: 'lightblue', color: 'white' }}
         >
