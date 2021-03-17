@@ -1,9 +1,14 @@
-import { Button, Grid, Typography, IconButton } from '@material-ui/core'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import InstagramIcon from '@material-ui/icons/Instagram'
+import {
+  Button,
+  Grid,
+  GridList,
+  GridListTile,
+  Typography,
+} from '@material-ui/core'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
 import { Link } from 'react-router-dom'
+import { CarouselItem } from '../components'
 
 export const HomePage = () => {
   return (
@@ -15,23 +20,30 @@ export const HomePage = () => {
           we offer affordable and attainable organization for the everyday
           person.
         </Typography>
-        <Carousel showArrows showThumbs={false} showStatus={false}>
-          <div>
-            <img src="/img/showcase1.jpg" />
-          </div>
-          <div>
-            <img src="/img/showcase2.jpg" />
-          </div>
-          <div>
-            <img src="/img/showcase3.jpg" />
-          </div>
-          <div>
-            <img src="/img/showcase4.jpg" />
-          </div>
-          <div>
-            <img src="/img/showcase5.jpg" />
-          </div>
-        </Carousel>
+        {/* <Carousel showArrows showThumbs={false} showStatus={false}>
+          <CarouselItem imgSrc="/img/showcase1.jpg" />
+          <CarouselItem imgSrc="/img/showcase2.jpg" />
+          <CarouselItem imgSrc="/img/showcase3.jpg" />
+          <CarouselItem imgSrc="/img/showcase4.jpg" />
+          <CarouselItem imgSrc="/img/showcase5.jpg" />
+        </Carousel> */}
+        <GridList cellHeight={320} cols={4}>
+          <GridListTile cols={2}>
+            <img src="/img/showcase1.jpg" alt="img1" />
+          </GridListTile>
+          <GridListTile cols={2}>
+            <img src="/img/showcase2.jpg" alt="img1" />
+          </GridListTile>
+          <GridListTile cols={1}>
+            <img src="/img/showcase3.jpg" alt="img1" />
+          </GridListTile>
+          <GridListTile cols={2}>
+            <img src="/img/showcase5.jpg" alt="img1" />
+          </GridListTile>
+          <GridListTile cols={1}>
+            <img src="/img/showcase4.jpg" alt="img1" />
+          </GridListTile>
+        </GridList>
         <div
           style={{ padding: 15, backgroundColor: 'lightblue', color: 'white' }}
         >
@@ -215,61 +227,27 @@ export const HomePage = () => {
         <Typography variant="h6">Packages</Typography>
         <Typography variant="body1">
           We have 3 packages to fit everyone&#39;s budget.
-          <ol>
-            <li>
+        </Typography>
+        <ol style={{ padding: '0px 15px' }}>
+          <li>
+            <Typography variant="body1">
               Time &amp; Energy ~ We will use what you have to create organized
               spaces.
-            </li>
-            <li>
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
               Organizing on a Budget ~ We will use economical organizers to
               create very functional and organized spaces.
-            </li>
-            <li>
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1">
               Picture Perfect ~ We will use top of the line storage and
               organizing products to create beautifully, organized spaces.
-            </li>
-          </ol>
-        </Typography>
-      </div>
-      <div
-        style={{
-          // backgroundColor: 'lightblue',
-          bottom: 0,
-          marginTop: 'auto',
-          //   position: 'fixed',
-          width: '100%',
-        }}
-      >
-        <Grid container justify="center">
-          <Grid item>
-            <IconButton
-              onClick={() =>
-                window.open(
-                  'https://www.facebook.com/TheWholeShebang.xyz',
-                  '_blank'
-                )
-              }
-            >
-              <FacebookIcon />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open(
-                  'https://www.instagram.com/thewholeshebang.xyz/',
-                  '_blank'
-                )
-              }
-            >
-              <InstagramIcon />
-            </IconButton>
-          </Grid>
-        </Grid>
-        <Typography
-          variant="body1"
-          style={{ padding: 15, textAlign: 'center' }}
-        >
-          Roseville, CA | (916) 759-1124 | info@thewholeshebang.xyz
-        </Typography>
+            </Typography>
+          </li>
+        </ol>
       </div>
     </>
   )
