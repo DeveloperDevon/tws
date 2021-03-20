@@ -13,7 +13,7 @@ export const GridListShowcase = () => {
         <img src="/img/showcase3.jpg" alt="img1" />
       </GridListTile>
       <GridListTile cols={2}>
-        <img src="/img/showcase5.jpg" alt="img1" />
+        <img src="/img/garage.jpeg" alt="img1" />
       </GridListTile>
       <GridListTile cols={1}>
         <img src="/img/showcase4.jpg" alt="img1" />

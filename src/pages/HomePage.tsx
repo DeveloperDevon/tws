@@ -69,16 +69,18 @@ export const HomePage = () => {
             Recently we added another daughter to our team making us Three
             Generations of Organization!
           </Typography>
-          <div
-            style={{
-              backgroundImage: 'url(/img/girls2.png',
-              height: 270,
-              backgroundSize: 'cover',
-              opacity: 0.8,
-              borderRadius: 25,
-              margin: '15px 0px 15px 0px',
-            }}
-          />
+          {isMobile && (
+            <div
+              style={{
+                backgroundImage: 'url(/img/girls2.png',
+                height: 270,
+                backgroundSize: 'cover',
+                opacity: 0.8,
+                borderRadius: 25,
+                margin: '15px 0px 15px 0px',
+              }}
+            />
+          )}
           <Typography>
             We understand that each of our client’s need a personal and unique
             touch to their space and we pride ourselves in bringing that to you
@@ -209,8 +211,8 @@ export const HomePage = () => {
         <ol style={{ padding: '0px 15px' }}>
           <li>
             <Typography variant="body1">
-              Time &amp; Energy ~ We will use what you have to create organized
-              spaces.
+              Our Time &amp; Energy ~ We will use what you have to create
+              organized spaces.
             </Typography>
           </li>
           <li>

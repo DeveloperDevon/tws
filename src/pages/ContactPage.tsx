@@ -44,7 +44,7 @@ export const ContactPage = () => {
       />
       <Spinner open={submitting} />
       <Typography variant="h6" style={{ textAlign: 'center', margin: 15 }}>
-        Contact Us Today
+        LET'S TALK!!
       </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
@@ -111,7 +111,7 @@ export const ContactPage = () => {
             <TextField
               variant="outlined"
               name="message"
-              label="Message"
+              label="Tell us about your space"
               style={{ width: '100%' }}
               multiline
               rows={3}

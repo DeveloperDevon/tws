@@ -8,7 +8,7 @@ export const CarouselShowcase = () => {
       <CarouselItem imgSrc="/img/showcase2.jpg" />
       <CarouselItem imgSrc="/img/showcase3.jpg" />
       <CarouselItem imgSrc="/img/showcase4.jpg" />
-      <CarouselItem imgSrc="/img/showcase5.jpg" />
+      <CarouselItem imgSrc="/img/garage.jpeg" />
     </Carousel>
   )
 }
