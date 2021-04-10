@@ -79,6 +79,16 @@ export const Services: React.FC = () => {
         clothes. We are there for you. Need help getting your holiday or season
         decorations out? Let us help you!
       </Typography>
+      <Typography variant="body1" style={{ fontWeight: 'bold' }}>
+        Virtual Organizing
+      </Typography>
+      <Typography variant="body1">
+        Is done through phone calls, emails, texts, or video chats and is a way
+        for us to assist your organizing needs no matter where you live or how
+        busy your schedule is! You will receive the same time, attention,
+        coaching and motivation as our in-person clients, but through the use of
+        technology.
+      </Typography>
     </div>
   )
 }

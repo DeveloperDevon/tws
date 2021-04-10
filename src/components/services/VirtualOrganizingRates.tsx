@@ -1,4 +1,5 @@
-import { Grid, Typography } from '@material-ui/core'
+import { Grid, List, Typography } from '@material-ui/core'
+import { Item } from '../common'
 
 export const VirtualOrganizingRates: React.FC = () => {
   return (
@@ -10,7 +11,72 @@ export const VirtualOrganizingRates: React.FC = () => {
         Our Virtual Organizing Packages and Rates
       </Typography>
       <Grid item xs={12}>
-        <Typography variant="body1">
+        <List>
+          <Item
+            icon={
+              <Typography
+                style={{ fontSize: 30, fontWeight: 'bold', color: 'lightblue' }}
+              >
+                X
+              </Typography>
+            }
+            title="Small Spaces"
+            content={
+              <Typography>
+                ~ $75 per space ~ This works best for smaller spaces, such as a
+                pantry, linen closet, play space, bathroom, kitchen cupboards
+                &amp; drawers. These spaces can be completed in a shorter
+                timeframe and are perfect for the “Do it Yourselfer” who just
+                needs a bit of direction &amp; accountability.{' '}
+                <span style={{ fontStyle: 'italic' }}>
+                  (This package includes One hour of our time broken down into
+                  the timeframes that work best for you and your project)
+                </span>
+              </Typography>
+            }
+          />
+          <Item
+            icon={
+              <Typography
+                style={{ fontSize: 30, fontWeight: 'bold', color: 'lightblue' }}
+              >
+                Y
+              </Typography>
+            }
+            title="Complete Room"
+            content={
+              <Typography>
+                ~ $125 per room ~ Do you have a compete room or more that you
+                need help getting Organized? This may be your kitchen, bedroom,
+                office, playroom or family room.{' '}
+                <span style={{ fontStyle: 'italic' }}>
+                  (This package includes Two hours of our time broken down into
+                  the timeframes that work best for you and your project)
+                </span>
+              </Typography>
+            }
+          />
+          <Item
+            icon={
+              <Typography
+                style={{ fontSize: 30, fontWeight: 'bold', color: 'lightblue' }}
+              >
+                Z
+              </Typography>
+            }
+            title="A’ La Carte"
+            content={
+              <Typography>
+                ~ $50 per session ~ Do you need to add extra time for LIVE video
+                chat coaching for your project? No problem, just add an A’ La
+                Carte session for the extra help that you need to get it done.
+                These sessions are 45 minutes and can be added to either of the
+                packages above, as needed.
+              </Typography>
+            }
+          />
+        </List>
+        {/* <Typography variant="body1">
           <span style={{ fontSize: 30, color: 'lightblue' }}>X</span>{' '}
           <span style={{ color: 'lightblue', fontWeight: 'bold' }}>
             Small Spaces
@@ -24,8 +90,8 @@ export const VirtualOrganizingRates: React.FC = () => {
             (This package includes One hour of our time broken down into the
             timeframes that work best for you and your project)
           </span>
-        </Typography>
-        <Typography variant="body1">
+        </Typography> */}
+        {/* <Typography variant="body1">
           <span style={{ fontSize: 30, color: 'lightblue' }}>Y</span>
           <span style={{ color: 'lightblue', fontWeight: 'bold' }}>
             Complete Room
@@ -37,8 +103,8 @@ export const VirtualOrganizingRates: React.FC = () => {
             (This package includes Two hours of our time broken down into the
             timeframes that work best for you and your project)
           </span>
-        </Typography>
-        <Typography variant="body1">
+        </Typography> */}
+        {/* <Typography variant="body1">
           <span style={{ fontSize: 30, color: 'lightblue' }}>Z</span>
           <span style={{ color: 'lightblue', fontWeight: 'bold' }}>
             {' '}
@@ -48,7 +114,7 @@ export const VirtualOrganizingRates: React.FC = () => {
           coaching for your project? No problem, just add an A’ La Carte session
           for the extra help that you need to get it done. These sessions are 45
           minutes and can be added to either of the packages above, as needed.
-        </Typography>
+        </Typography> */}
       </Grid>
     </Grid>
   )

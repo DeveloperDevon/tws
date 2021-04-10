@@ -1,23 +1,5 @@
-import {
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from '@material-ui/core'
-import SendIcon from '@material-ui/icons/Send'
-
-const Item: React.FC = ({ children }) => {
-  return (
-    <ListItem>
-      <ListItemIcon>
-        <SendIcon fontSize="small" color="primary" />
-      </ListItemIcon>
-      <ListItemText>{children}</ListItemText>
-    </ListItem>
-  )
-}
+import { Grid, List, Typography } from '@material-ui/core'
+import { Item } from '../common'
 
 export const VirtualOrganizing: React.FC = () => {
   return (
@@ -61,28 +43,12 @@ export const VirtualOrganizing: React.FC = () => {
           Virtual Organizing will work well for you if:
         </Typography>
         <List>
-          <Item>
-            You&#39;re motivated and committed to reach your organizing goals.
-          </Item>
-          <Item>
-            You&#39;re comfortable using technology on your phone, tablet, or
-            computer.
-          </Item>
-          <Item>
-            You&#39;re able to do the work, but you need someone to check in
-            with you frequently for accountability.
-          </Item>
-          <Item>
-            You are busy and don&#39;t have time for in-person organizing
-            sessions so you want to get organized on your own time schedule.
-          </Item>
-          <Item>
-            You love customized, personal advice for your home &amp; budget.
-          </Item>
-          <Item>
-            You live outside the Roseville, CA area but want help to get
-            organized by The Whole Shebang!
-          </Item>
+          <Item content="You&#39;re motivated and committed to reach your organizing goals." />
+          <Item content="You&#39;re comfortable using technology on your phone, tablet, or computer." />
+          <Item content="You&#39;re able to do the work, but you need someone to check in with you frequently for accountability." />
+          <Item content="You are busy and don&#39;t have time for in-person organizing sessions so you want to get organized on your own time schedule." />
+          <Item content="You love customized, personal advice for your home &amp; budget." />
+          <Item content="You live outside the Roseville, CA area but want help to get organized by The Whole Shebang!" />
         </List>
         <Typography variant="body1" style={{ padding: 15 }}>
           Virtual Organizing packages include unlimited correspondence
@@ -96,57 +62,23 @@ export const VirtualOrganizing: React.FC = () => {
           YOU WILL RECEIVE…
         </Typography>
         <List>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>
-                A FREE discovery phone call
-              </span>{' '}
-              to make sure this process is a good fit for you, so you don’t
-              waste time and money on a process that’s not going to work for
-              you.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>
-                Step-by-step guidance from a professional home organizer
-              </span>{' '}
-              so you don’t feel alone and overwhelmed, you get advice along the
-              way and we break down the process into manageable steps just for
-              you.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>A Follow up email</span> to
-              remind you of next steps and keep you accountable so you continue
-              to make progress toward your inspiring living space.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>
-                Flexible scheduling options
-              </span>{' '}
-              so you get to choose how often you want to schedule additional
-              virtual organizing sessions, whether it is daily, weekly or
-              monthly.
-            </ListItemText>
-          </ListItem>
+          <Item
+            title="A FREE discovery phone call"
+            content="to make sure this process is a good fit for you, so you don’t waste time and money on a process that’s not going to work for you."
+          />
+          <Item
+            title="Step-by-step guidance from a professional home organizer"
+            content="so you don’t feel alone and overwhelmed, you get advice along the way and we break down the process into manageable steps just for you."
+          />
+          <Item
+            title="A Follow up email"
+            content="to remind you of next steps and keep you accountable so you continue to make progress toward your inspiring living space."
+          />
+          <Item
+            title="Flexible scheduling options"
+            content="so you get to choose how often you want to schedule additional virtual organizing sessions, whether it is daily, weekly or monthly."
+          />
         </List>
-
         <Typography
           variant="body1"
           style={{ padding: 15, fontWeight: 'bold', color: '#b3e5fc' }}
@@ -154,58 +86,26 @@ export const VirtualOrganizing: React.FC = () => {
           YOU WILL LEARN TO...
         </Typography>
         <List>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>De-clutter and sort</span> to
-              make your decision-making process quicker and easier to make
-              choices on what you want to keep, discard or donate.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>Create Organization</span> to
-              set up functional zones, where everything has a designated place
-              to be stored, so that your daily routines are stress-free and
-              easy.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>Optimize your space</span>{' '}
-              with organizing containers and systems that support your daily
-              routines.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>Break down projects</span>{' '}
-              strategically into more manageable bite-size tasks that aren’t
-              overwhelming.
-            </ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" color="primary" />
-            </ListItemIcon>
-            <ListItemText>
-              <span style={{ fontWeight: 'bold' }}>
-                Increase your confidence
-              </span>{' '}
-              with the organizing skills and experience you gain.
-            </ListItemText>
-          </ListItem>
+          <Item
+            title="De-clutter and sort"
+            content="to make your decision-making process quicker and easier to make choices on what you want to keep, discard or donate."
+          />
+          <Item
+            title="Create Organization"
+            content="to set up functional zones, where everything has a designated place to be stored, so that your daily routines are stress-free and easy."
+          />
+          <Item
+            title="Optimize your space"
+            content="with organizing containers and systems that support your daily routines."
+          />
+          <Item
+            title="Break down projects"
+            content="strategically into more manageable bite-size tasks that aren’t overwhelming."
+          />
+          <Item
+            title="Increase your confidence"
+            content="with the organizing skills and experience you gain."
+          />
         </List>
       </Grid>
     </Grid>

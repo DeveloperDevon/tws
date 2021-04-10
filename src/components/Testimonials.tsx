@@ -90,6 +90,23 @@ const TESTIMONIALS = [
     ),
     reviewer: 'Stacey ~ Rocklin, CA Realtor',
   },
+  {
+    review: (
+      <Typography variant="body1">
+        <FormatQuoteIcon
+          style={{ transform: 'scaleX(-1)', color: 'lightblue' }}
+        />
+        Krista has been doing bi-weekly home maintenance for us for over two
+        years. She is very reliable and trustworthy. We eagerly anticipate her
+        visits, as she has become a dear and thoughtful friend. When the day
+        comes that we need to move into something smaller, it’s a real comfort
+        to know that we have someone who will be able to help us with that major
+        undertaking.
+        <FormatQuoteIcon style={{ color: 'lightblue' }} />
+      </Typography>
+    ),
+    reviewer: 'Helen, Sun City Lincoln Hills',
+  },
 ]
 
 export const Testimonials: React.FC = () => {
