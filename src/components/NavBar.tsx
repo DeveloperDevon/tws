@@ -6,14 +6,13 @@ import {
   IconButton,
   List,
   ListItem,
-  makeStyles,
   SwipeableDrawer,
   Toolbar,
   Typography,
   useMediaQuery,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useHistory } from 'react-router-dom'
 
 const routes = [
   { path: '/', label: 'Home' },
@@ -24,6 +23,7 @@ const routes = [
 ]
 
 const DesktopNavBar: React.FC = () => {
+  const history = useHistory()
   return (
     <AppBar position="static" style={{ backgroundColor: 'white' }}>
       <Toolbar>
@@ -36,6 +36,7 @@ const DesktopNavBar: React.FC = () => {
           <Grid item xs={3}>
             <Avatar
               src="/img/logo2.png"
+              onClick={() => history.push('/')}
               style={{
                 padding: '10px 20px',
                 width: '125px',
@@ -54,6 +55,7 @@ const DesktopNavBar: React.FC = () => {
                     to={route.path}
                     activeStyle={{
                       color: 'lightblue',
+                      fontWeight: 'bolder',
                     }}
                     style={{ color: 'black', textDecoration: 'none' }}
                   >
@@ -71,6 +73,7 @@ const DesktopNavBar: React.FC = () => {
 
 const MobileNavBar: React.FC = (props) => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const history = useHistory()
   return (
     <AppBar
       position="static"
@@ -93,7 +96,11 @@ const MobileNavBar: React.FC = (props) => {
           style={{ width: '100%', paddingRight: 48, textAlign: 'center' }}
         >
           <div style={{ height: '50px' }}>
-            <img src="/img/logo.png" style={{ height: '100%' }} />
+            <img
+              src="/img/logo.png"
+              style={{ height: '100%' }}
+              onClick={() => history.push('/')}
+            />
           </div>
         </Typography>
         <SwipeableDrawer
@@ -104,6 +111,10 @@ const MobileNavBar: React.FC = (props) => {
         >
           <Avatar
             src="/img/logo2.png"
+            onClick={() => {
+              history.push('/')
+              setMenuOpen(false)
+            }}
             style={{
               padding: '10px 20px',
               width: '100px',

@@ -6,6 +6,9 @@ import grey from '@material-ui/core/colors/grey'
 
 const App: React.FC = () => {
   const theme = createMuiTheme({
+    typography: {
+      fontFamily: 'bellota',
+    },
     palette: {
       primary: {
         main: lightblue[100],

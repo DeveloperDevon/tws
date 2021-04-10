@@ -13,10 +13,18 @@ export const AboutPage = () => {
             Our Story
           </Typography>
         </Grid>
-        <Grid item>
-          <img
-            src="/img/girls.jpg"
-            style={{ marginLeft: 'auto', borderRadius: 25, opacity: 0.8 }}
+        <Grid item style={{ width: '100%' }}>
+          <div
+            style={{
+              backgroundImage: 'url(/img/girls3.jpg',
+              maxWidth: 270,
+              height: 270,
+              width: '100%',
+              backgroundSize: 'cover',
+              opacity: 0.8,
+              borderRadius: 25,
+              margin: '15px auto 15px auto',
+            }}
           />
         </Grid>
         <Grid item xs={12}>
